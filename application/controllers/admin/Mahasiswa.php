@@ -60,6 +60,7 @@ class Mahasiswa extends CI_Controller {
 
 	public function proses_edit()
 	{
+		//proses sudah di update
 		$id = $this->input->post('nim');
 		$obj = array(
 			'nama_mahasiswa' => $this->input->post('nama_mahasiswa'),
