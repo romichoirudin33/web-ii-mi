@@ -6,6 +6,9 @@ class Mahasiswa extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if ($this->session->userdata('admin') != true) {
+            redirect('login','refresh');
+        }
 		$this->load->model('Mahasiswa_model');
 	}
 

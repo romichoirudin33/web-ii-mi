@@ -36,6 +36,10 @@
                     <a class="dropdown-item" href="#">Perwalian</a>
                 </div>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= site_url('login/destroy'); ?>">Logout</a>
+            </li>   
         </ul>
 
     </div>

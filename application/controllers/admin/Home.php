@@ -1,11 +1,16 @@
 <?php
-
 class Home extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if ($this->session->userdata('admin') != true) {
+            redirect('login','refresh');
+        }
+    }
+
     public function index()
     {
-//      echo "Admin / home ";
-
         $data['judul'] = 'Dashboard';
         $data['sub_judul'] = 'Halaman Utama';
         //lokasi content view yang di tampilkan
